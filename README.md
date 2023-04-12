@@ -42,6 +42,7 @@ Users should be able to:
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
+  - Identify Components and structure App
 
 ### Built with
 
