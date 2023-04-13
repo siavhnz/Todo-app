@@ -43,6 +43,8 @@ Users should be able to:
 
 ## My process
   - Identify Components and structure App
+  - Working on Mobile design
+    - Install preflight.css, install fonts, set Title & favicon , working on resolution >= 375px
 
 ### Built with
 

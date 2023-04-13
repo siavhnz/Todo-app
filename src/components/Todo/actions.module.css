@@ -1,0 +1,11 @@
+.actions-container {
+    display: flex;
+    column-gap: 1.35rem;
+    justify-content: center;
+    border-radius: 0.25rem;
+    padding: 0.9375rem 1.25rem;
+    background: var(--color-very-light-gray);
+    color: var(--color-dark-grayish-blue);
+    font-weight: 700;
+    font-size: 0.8rem;
+}

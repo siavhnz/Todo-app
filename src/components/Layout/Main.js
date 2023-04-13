@@ -1,9 +1,13 @@
 import Todo from "../Todo";
+import Wrapper from "./Wrapper";
+import styles from "./Main.module.css";
 
 const Main = () => {
     return (
         <main>
-            <Todo />
+            <Wrapper cssClass={styles["main-container"]}>
+                <Todo />
+            </Wrapper>
         </main>
     );
 }

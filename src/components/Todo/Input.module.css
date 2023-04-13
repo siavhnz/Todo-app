@@ -1,0 +1,23 @@
+.input-container {
+    background: var(--color-very-light-gray);
+    margin-top: 1.7rem;
+    border-radius: .25rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    column-gap: .75rem;
+    padding-left: 1.25rem;
+}
+
+input[type="text"] { 
+    background: var(--color-very-light-gray);
+    color:var(--color-light-grayish-blue);
+    font-weight: 400;
+    font-size: .75rem;
+    width: 80%;
+    height: 3rem;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}

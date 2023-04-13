@@ -1,7 +1,7 @@
+import styles from "./CircleButton.module.css";
+
 const CircleButton = () => {
-    return <button>
-        
-    </button>
+    return <button className={styles.btn}></button>;
 }
 
 export default CircleButton;

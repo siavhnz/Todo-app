@@ -1,17 +1,25 @@
+import Wrapper from "./Wrapper";
 import ImgControlLight from "../../assets/images/icon-moon.svg";
 import ImgControlDark from "../../assets/images/icon-sun.svg";
+import styles from "./Header.module.css";
 
 
 const Header = () => {
     return (
-        <header>
-            <h1>
-                TODO
-            </h1>
-            <button>
-                <img src={ImgControlLight} alt="toggle dark and light mode" />
-            </button>
-        </header>
+        <>
+            <div className={styles["body-img"]} />
+            <Wrapper>
+                <header className={styles.header}>
+                    <h1 className={styles.title}>
+                        TODO
+                    </h1>
+                    <button className={styles["toggle-btn"]}>
+                        <img src={ImgControlLight} alt="toggle dark and light mode" />
+                    </button>
+                </header>
+            </Wrapper>
+            
+        </>
     );
 }
 
