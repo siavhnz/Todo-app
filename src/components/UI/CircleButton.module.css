@@ -14,3 +14,10 @@
     padding-left: .25rem;
     width: 0.85rem;
 }
+
+/*
+    dark mode styles
+*/
+body[data-theme="theme-dark"] .btn {
+    border-color: var(--color-very-dark-grayish-blue3);
+}

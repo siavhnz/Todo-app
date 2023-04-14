@@ -40,3 +40,27 @@
     font-weight: 400;
     font-size: .75rem;
 }
+
+
+/*
+    dark mode styles
+*/
+body[data-theme="theme-dark"] .list-container {
+    background-color: var(--color-Very-dark-desaturated-blue);
+}
+
+body[data-theme="theme-dark"] .item {
+    border-bottom-color: var(--color-very-dark-grayish-blue3);
+}
+
+body[data-theme="theme-dark"] .title {
+    color: var(--color-light-grayish-blue2);
+}
+
+body[data-theme="theme-dark"] .completed {
+    color:var(--color-very-dark-grayish-blue2);
+}
+
+body[data-theme="theme-dark"] .info {
+    color:var(--color-very-dark-grayish-blue2);
+}

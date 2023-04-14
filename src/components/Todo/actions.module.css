@@ -13,3 +13,11 @@
 .active-text {
     color: var(--color-blue);
 }
+
+/*
+    dark mode styles
+*/
+body[data-theme="theme-dark"] .actions-container {
+    background-color: var(--color-Very-dark-desaturated-blue);
+    color: var(--color-very-dark-grayish-blue2);
+}

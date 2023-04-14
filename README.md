@@ -47,6 +47,7 @@ Users should be able to:
     - Install preflight.css, install fonts, set Title & favicon , working on resolution >= 375px
   - Working on Todo functionality
     - add & delete item, mark as complete, clear completed item, filter by active & complete state
+  - Working on Light and Dark mode
 
 ### Built with
 

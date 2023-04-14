@@ -1,4 +1,4 @@
-import { modes } from "./data";
+import { modes } from "../utility/data";
 
 /**
  * This initial state consist of:
@@ -6,7 +6,7 @@ import { modes } from "./data";
  * 2. a uniqe id for track each todo
  * 3. mode of each todo
  */
-export const initialState = {
+export const todoDefaultState = {
     todoList: [],
     uid: 0,
     mode: "all", // active, completed

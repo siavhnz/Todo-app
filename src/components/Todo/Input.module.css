@@ -21,3 +21,16 @@ input[type="text"] {
 input[type="text"]:focus {
     outline: none;
 }
+
+/* 
+    dark mode styles
+*/
+
+body[data-theme="theme-dark"] .input-container,
+body[data-theme="theme-dark"] input[type="text"] {
+    background: var(--color-Very-dark-desaturated-blue);
+}
+
+body[data-theme="theme-dark"] input[type="text"] {
+    color: var(--color-dark-grayish-blue2);
+}

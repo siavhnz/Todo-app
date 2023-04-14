@@ -3,7 +3,7 @@ import List from "./List";
 import Actions from "./actions";
 
 import { useReducer } from "react";
-import { initialState , todoReducer } from "../../utility/todoReducer";
+import { todoDefaultState , todoReducer } from "../../reducers/todoReducer";
 import { modes } from "../../utility/data";
 /**
  * Todo Component consist of 3 component:
@@ -17,7 +17,7 @@ const Todo = () => {
      * Magange state and handle user interaction (add, remove item)
      * by todoReducer
      */
-    const [state, dispatch] = useReducer(todoReducer, initialState);
+    const [state, dispatch] = useReducer(todoReducer, todoDefaultState);
 
     // Call dispatch for adding a new item
     const addItem = (title) => {

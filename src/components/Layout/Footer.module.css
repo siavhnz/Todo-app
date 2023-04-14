@@ -4,3 +4,10 @@
     font-size: 0.85rem;
     color: var(--color-dark-grayish-blue)
 }
+
+/*
+    dark mode styles
+*/
+body[data-theme="theme-dark"] .footer {
+    color: var(--color-very-dark-grayish-blue2);
+}
