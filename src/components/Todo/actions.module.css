@@ -9,3 +9,7 @@
     font-weight: 700;
     font-size: 0.8rem;
 }
+
+.active-text {
+    color: var(--color-blue);
+}

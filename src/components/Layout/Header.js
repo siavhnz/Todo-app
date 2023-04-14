@@ -3,6 +3,9 @@ import ImgControlLight from "../../assets/images/icon-moon.svg";
 import ImgControlDark from "../../assets/images/icon-sun.svg";
 import styles from "./Header.module.css";
 
+/**
+ * Header component to hold logo and theme mode
+ */
 
 const Header = () => {
     return (

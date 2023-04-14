@@ -5,3 +5,12 @@
     border-radius: 100%;
     align-self: center;
 }
+
+.checked {
+    background:linear-gradient(120deg,#57ddff, #c058f3);
+}
+
+.checked img {
+    padding-left: .25rem;
+    width: 0.85rem;
+}

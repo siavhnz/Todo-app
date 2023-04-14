@@ -16,6 +16,11 @@
     font-size: .75rem;
 }
 
+.completed {
+    color: var(--color-light-grayish-blue);
+    text-decoration: line-through;
+}
+
 .cross {
     margin-left: auto;
     align-self: center;

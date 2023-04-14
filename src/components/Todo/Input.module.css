@@ -11,7 +11,7 @@
 
 input[type="text"] { 
     background: var(--color-very-light-gray);
-    color:var(--color-light-grayish-blue);
+    color:var(--color-dark-grayish-blue);
     font-weight: 400;
     font-size: .75rem;
     width: 80%;

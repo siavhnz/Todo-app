@@ -45,6 +45,8 @@ Users should be able to:
   - Identify Components and structure App
   - Working on Mobile design
     - Install preflight.css, install fonts, set Title & favicon , working on resolution >= 375px
+  - Working on Todo functionality
+    - add & delete item, mark as complete, clear completed item, filter by active & complete state
 
 ### Built with
 
