@@ -33,7 +33,7 @@ const Input = (props) => {
     return (
         <div className={styles["input-container"]}>    
             <CircleButton mode={modes.Active} />{/* this is a presentational component */}
-            <input type="text" placeholder="Create a new todo" onChange={changeHandler} onKeyDown={keyDownHandler} value={value} />
+            <input className={styles.input} type="text" placeholder="Create a new todo..." onChange={changeHandler} onKeyDown={keyDownHandler} value={value} />
         </div>
     );
 }

@@ -2,10 +2,11 @@ import CircleButton from "../UI/CircleButton";
 import CrossIcon from "../../assets/images/icon-cross.svg";
 import styles from "./List.module.css";
 import { modes } from "../../utility/data";
+import Actions from "./actions";
 
 /**
  * List of todos component
- * @param {*} props items, mode, onRemoveItem, onClearCompleted, onMarkAsCompleted
+ * @param {*} props items, mode, onRemoveItem, onClearCompleted, onMarkAsCompleted, onFilter
  */
 
 const List = (props) => {
@@ -23,6 +24,11 @@ const List = (props) => {
     // Call parent (index.js) markAsCompleted to mark a todo as a completed
     const markAsCompleted = (id) => {
         props.onMarkAsCompleted(id);
+    }
+
+    // Call parent (index.js) filter
+    const handleFilter = (mode) => {
+        props.onFilter(mode);
     }
 
     // Get Todos from props
@@ -55,7 +61,7 @@ const List = (props) => {
         return (
             <li className={styles.item} key={index}>
                 <CircleButton mode={item.mode} onPress={() => markAsCompleted(item.id)} />
-                <h2 className={(item.mode === modes.Completed) ? `${styles.title} ${styles.completed}` : styles.title}>
+                <h2 onClick={() => markAsCompleted(item.id)} className={(item.mode === modes.Completed) ? `${styles.title} ${styles.completed}` : styles.title}>
                     {item.title}
                 </h2>
                 <button className={styles.cross} onClick={() => handleRemove(item.id)}>
@@ -70,13 +76,15 @@ const List = (props) => {
             <ul>
                  {list}
             </ul>
-            <div className={styles.info}>
-                <div>
+            <div className={styles.footer}>
+                <div className={styles.count}>
                     {activeCount} items left
                 </div>
-                <button onClick={() => handleClearCompleted()}>
+                <Actions mode={props.mode} onFilter={handleFilter}/>
+                <button onClick={() => handleClearCompleted()} className={styles.clear}>
                     Clear Completed
                 </button>
+                <div className={styles.empty} />       
             </div>
         </div>
     );

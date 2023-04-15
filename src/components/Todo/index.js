@@ -66,9 +66,8 @@ const Todo = () => {
             items={state.todoList} 
             onRemoveItem={removeItem}
             onClearCompleted={clearCompleted}
-            onMarkAsCompleted={markAsCompleted} />
-
-            <Actions onFilter={filter} mode={state.mode}/>
+            onMarkAsCompleted={markAsCompleted}
+            onFilter={filter}  />
         </>
     );
 }

@@ -16,26 +16,32 @@ export const modes = {
  */
 export const list = [
     {
+        id: 1,
         title: "Complete online JavaScript course",
         mode: modes.Completed,
     },
     {
+        id: 2,
         title: "Jog around the park 3x",
         mode: modes.Active,
     },
     {
-        title: "10 minuts miditation",
+        id: 3,
+        title: "10 minutes miditation",
         mode: modes.Active,
     },
     {
+        id: 4,
         title: "Read for 1 hour",
         mode: modes.Active,
     },
     {
+        id: 5,
         title: "Pick up groceries",
         mode: modes.Active,
     },
     {
+        id: 6,
         title: "Complete Todo App on Frontend Mentor",
         mode: modes.Active,
     }

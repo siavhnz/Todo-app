@@ -1,13 +1,19 @@
 .actions-container {
     display: flex;
-    column-gap: 1.35rem;
+    column-gap: 1.3rem;
     justify-content: center;
+    grid-row-start: 3;
+    grid-column-start: span 2;
+
     border-radius: 0.25rem;
-    padding: 0.9375rem 1.25rem;
     background: var(--color-very-light-gray);
-    color: var(--color-dark-grayish-blue);
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    
+}
+
+.actions-container > button:hover:not(.active-text) {
+    color: var(--color-very-dark-grayish-blue);
 }
 
 .active-text {
@@ -20,4 +26,15 @@
 body[data-theme="theme-dark"] .actions-container {
     background-color: var(--color-Very-dark-desaturated-blue);
     color: var(--color-very-dark-grayish-blue2);
+}
+body[data-theme="theme-dark"] .actions-container > button:hover:not(.active-text) {
+    color: var(--color-light-grayish-blue2);
+}
+/*
+    Responsive design
+*/
+@media (min-width: 40rem) { /* 640px*/
+    .actions-container {
+        padding-left: 2rem;
+    }
 }

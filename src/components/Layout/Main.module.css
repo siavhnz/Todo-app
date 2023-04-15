@@ -3,3 +3,12 @@
     flex-direction: column;
     row-gap: 1rem;
 }
+
+/*
+    Responsive design
+*/
+@media (min-width: 40rem) { /* 640px*/
+    .main-container {
+        row-gap: 1.5rem;
+    }
+}

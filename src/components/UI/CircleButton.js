@@ -7,7 +7,7 @@ import { modes } from "../../utility/data";
  */
 const CircleButton = (props) => {
     const cssClass = (props.mode === modes.Completed) ? `${styles.btn} ${styles.checked}` : styles.btn;
-
+    const presentational = (props.onPress) ? "active" : "disable";
     const handleOnPress = () => {
         /**
          * For presentational component onPress 
@@ -24,7 +24,7 @@ const CircleButton = (props) => {
         }
     }
     
-    return <button className={cssClass} onClick={handleOnPress}>
+    return <button className={`${cssClass} ${styles[presentational]}`} onClick={handleOnPress}>
             {
                 (props.mode === modes.Completed) ? <img src={CheckIcon} /> : ""
             }

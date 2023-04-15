@@ -2,3 +2,13 @@
     margin-left:1.5rem;
     margin-right: 1.5rem;
 }
+
+/*
+    Responsive design
+*/
+@media (min-width: 40rem) { /* 640px*/
+    .wrapper {
+        max-width: 33.75rem; /* 540px*/
+        margin: auto;
+    }
+}

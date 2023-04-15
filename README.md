@@ -43,11 +43,12 @@ Users should be able to:
 
 ## My process
   - Identify Components and structure App
-  - Working on Mobile design
+  - Working on Mobile design based on ![design folder](./design) - 375px
     - Install preflight.css, install fonts, set Title & favicon , working on resolution >= 375px
   - Working on Todo functionality
     - add & delete item, mark as complete, clear completed item, filter by active & complete state
   - Working on Light and Dark mode
+  - Working on Desktop design on ![design folder](./design) - 1440px
 
 ### Built with
 

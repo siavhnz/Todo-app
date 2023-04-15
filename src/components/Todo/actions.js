@@ -3,7 +3,7 @@ import styles from "./actions.module.css";
 
 /**
  * Actions component for getting user filters
- * @param {*} props mode, onFilter
+ * @param {*} props cssClass, mode, onFilter
  */
 const Actions = (props) => {
 
