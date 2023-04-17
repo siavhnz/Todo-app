@@ -23,6 +23,14 @@
     color:var(--color-very-dark-grayish-blue);
 }
 
+.checkbox {
+    min-width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid var(--color-light-grayish-blue);
+    border-radius: 100%;
+    align-self: center;
+}
+
 /* 
     dark mode styles
 */
@@ -38,6 +46,10 @@ body[data-theme="theme-dark"] .input {
 
 body[data-theme="theme-dark"] .input:focus {
     color: var(--color-light-grayish-blue2);
+}
+
+body[data-theme="theme-dark"] .checkbox {
+    border-color: var(--color-very-dark-grayish-blue3);
 }
 
 /*

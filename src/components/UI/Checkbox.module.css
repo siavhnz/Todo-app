@@ -6,11 +6,7 @@
     align-self: center;
 }
 
-.btn.disable {
-    cursor: default;
-}
-
-.btn.active:hover:empty {
+.btn:hover:empty {
     border-radius: 100%;
     background: linear-gradient(var(--color-very-light-gray), var(--color-very-light-gray)) padding-box,
               linear-gradient(to right, #57ddff, #c058f3) border-box;
@@ -33,7 +29,7 @@
 body[data-theme="theme-dark"] .btn {
     border-color: var(--color-very-dark-grayish-blue3);
 }
-body[data-theme="theme-dark"] .btn.active:hover:empty {
+body[data-theme="theme-dark"] .btn:hover:empty {
     background: linear-gradient(var(--color-Very-dark-desaturated-blue), var(--color-Very-dark-desaturated-blue)) padding-box,
               linear-gradient(to right, #57ddff, #c058f3) border-box;
 }

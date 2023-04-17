@@ -1,18 +1,30 @@
-import { list, modes } from "../utility/data";
+import { modes } from "../../utility/todo-data";
+import { calculateItemsCount, filterList, changeMode } from "../../utility/todo-toolbox";
 
 /**
  * This initial state consist of:
  * 1. list of todos
  * 2. a uniqe id for track each todo
  * 3. mode of each todo
+ * 4. active items
  */
 export const todoDefaultState = {
-    todoList: list,
-    uid: 6,
-    mode: "all", // active, completed
+    list: [],
+    filteredList: [],
+    uid: 0,
+    mode: "", //all, active, completed
+    activeItemsCount: 0,
 };
 
 export const todoReducer = (state, action) => {
+
+    /**
+     * I used newState to first calculate the active items
+     * and filter items then return the state instead of 
+     * return state on each condition
+     */
+    let newState = {...todoDefaultState};
+
     /**
      * Add a new todo and increment the uid
      * Important ->
@@ -23,16 +35,17 @@ export const todoReducer = (state, action) => {
      * are overwritten
      */
     if(action.type === "ADD") {
-        return {
+        newState = {
             ...state,
-            todoList: [
+            list: [
                 {   
                     id: state.uid + 1,
                     ...action.payload,
                 },
-                ...state.todoList
+                ...state.list
             ],
-            uid: state.uid + 1
+            uid: state.uid + 1,
+            mode: modes.All,
         }
     }
 
@@ -40,11 +53,13 @@ export const todoReducer = (state, action) => {
      * Remove a todo item based on payload (id)
      */
     else if(action.type === "REMOVE") {
-        return {
+
+        newState = {
             ...state,
-            todoList: state.todoList.filter((item) => {
+            list: state.list.filter((item) => {
                 return item.id !== action.payload
             }),
+            
         }
     }
 
@@ -53,9 +68,9 @@ export const todoReducer = (state, action) => {
      * payload (id)
      */
     else if(action.type === "MARK_AS_COMPLETED"){
-        return {
+        newState = {
             ...state,
-            todoList: state.todoList.map((item) => {
+            list: state.list.map((item) => {
                 if(item.id === action.payload) {
                     item.mode = modes.Completed
                 }
@@ -68,9 +83,9 @@ export const todoReducer = (state, action) => {
      * Delete all completed items
      */
     else if(action.type === "CLEAR_COMPLETED") {
-        return {
+        newState = {
             ...state,
-            todoList: state.todoList.filter((item) => {
+            list: state.list.filter((item) => {
                 return item.mode !== modes.Completed
             }),
         }
@@ -81,11 +96,21 @@ export const todoReducer = (state, action) => {
      * payload (all, active, completed)
      */
     else if(action.type === "FILTER") {
-        return {
+        newState = {
             ...state,
             mode: action.payload
         }
     }
 
-    return state;
+    // if we are in completed or active mode and we have no items
+    // after REMOVE action back to all mode otherwise stay as before
+    let mode = changeMode(newState.list, newState.mode, action.type);
+
+    return {
+        ...newState,
+        mode: mode,
+        activeItemsCount: calculateItemsCount(newState.list, modes.Active),
+        filteredList: filterList(newState.list, mode),
+    };
 }
+

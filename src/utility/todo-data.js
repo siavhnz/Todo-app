@@ -14,7 +14,7 @@ export const modes = {
 /**
  * Using for design purpose
  */
-export const list = [
+export const data = [
     {
         id: 1,
         title: "Complete online JavaScript course",

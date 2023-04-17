@@ -1,17 +1,15 @@
-import { useState } from "react";
-
-import CircleButton from "../UI/CircleButton";
+import { useContext, useState } from "react";
+import { TodoContext } from "../../store/context/todo-context";
 import styles from "./Input.module.css";
 
-import {modes} from "../../utility/data"
 
 /**
  * Input component for getting user todos
- * @param {*} props onAddItem
  */
 
 const Input = (props) => {
-    let [value, setValue] = useState(""); 
+    let [value, setValue] = useState("");
+    const todoCtx = useContext(TodoContext)
 
     /**
      * Get user todo by pressing Enter(keyCode=13)
@@ -20,7 +18,7 @@ const Input = (props) => {
     const keyDownHandler = (e) => {   
         if(value.trim() !== "" &&
             e.keyCode === 13) {
-                props.onAddItem(value.trim());
+                todoCtx.addItem(value.trim());
                 setValue("");
         }
     }
@@ -32,7 +30,7 @@ const Input = (props) => {
 
     return (
         <div className={styles["input-container"]}>    
-            <CircleButton mode={modes.Active} />{/* this is a presentational component */}
+            <div className={styles.checkbox}></div>
             <input className={styles.input} type="text" placeholder="Create a new todo..." onChange={changeHandler} onKeyDown={keyDownHandler} value={value} />
         </div>
     );

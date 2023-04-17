@@ -49,8 +49,10 @@ Users should be able to:
     - add & delete item, mark as complete, clear completed item, filter by active & complete state
   - Working on Light and Dark mode
   - Working on Desktop design on ![design folder](./design) - 1440px
+  - Improving Components and app data flow by useContext
 
 ### Built with
+
 
 ### What I learned
 
