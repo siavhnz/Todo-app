@@ -40,7 +40,7 @@ Users should be able to:
 
 - Solution: [frontendmentor.io](https://www.frontendmentor.io/solutions/todo-app-Gpz9xX81l1)
 
-- Live Site: [netlify.app](todo-app-xyz.netlify.app)
+- Live Site: [netlify.app](https://todo-app-xyz.netlify.app)
 
 ## My process
   - Identify Components and structure App
@@ -49,7 +49,7 @@ Users should be able to:
   - Working on Todo functionality
     - add & delete item, mark as complete, clear completed item, filter by active & complete state
   - Working on Light and Dark mode
-  - Working on Desktop design on `design `folder - 1440px
+  - Working on Desktop design on `design` folder - 1440px
   - Improving Components and app data flow by useContext
   - Adding Drag & Drop to reorder items and animation to components with framer-motion
 
@@ -83,7 +83,7 @@ with handling larger project
 
 ## Author
 
-- github - [@siavhnz](https://www.your-site.com)
+- github - [@siavhnz](https://www.github.com/siavhnz)
 
 - Frontend Mentor - [@siavhnz](https://www.frontendmentor.io/profile/siavhnz)
 
