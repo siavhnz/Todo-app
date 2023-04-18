@@ -6,8 +6,8 @@ import styles from "./Footer.module.css";
  */
 const Footer = () => {
     return (
-        <footer cssClass={styles.footer}>
-            <Wrapper>
+        <footer>
+            <Wrapper cssClass={styles.footer}>
                 Drag and drop to reorder list
             </Wrapper>
         </footer>
