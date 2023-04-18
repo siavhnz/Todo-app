@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from "react";
+import { useEffect, useState } from "react";
 import { Header, Main, Footer } from "./components/Layout";
 function App() {
 

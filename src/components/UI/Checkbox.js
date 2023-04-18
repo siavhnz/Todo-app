@@ -8,7 +8,7 @@ import { modes } from "../../utility/todo-data";
 const Checkbox = ({mode, onPress}) => {
     const cssClass = (mode === modes.Completed) ? `${styles.btn} ${styles.checked}` : styles.btn;
     
-    return <button className={cssClass} onClick={() => onPress()}>
+    return <button className={cssClass} onClick={() => onPress()} aria-label="checkbox for mark a todo as completed" >
             {
                 (mode === modes.Completed) ? <img src={CheckIcon} alt="checkbox for mark a todo as completed" /> : ""
             }
