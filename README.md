@@ -34,34 +34,66 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screenshot](./screenshot/screenshot.png)
  
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution: [frontendmentor.io](https://www.frontendmentor.io/solutions/todo-app-Gpz9xX81l1)
+
+- Live Site: [netlify.app](todo-app-xyz.netlify.app)
 
 ## My process
   - Identify Components and structure App
-  - Working on Mobile design based on ![design folder](./design) - 375px
+  - Working on Mobile design based on `design` folder - 375px
     - Install preflight.css, install fonts, set Title & favicon , working on resolution >= 375px
   - Working on Todo functionality
     - add & delete item, mark as complete, clear completed item, filter by active & complete state
   - Working on Light and Dark mode
-  - Working on Desktop design on ![design folder](./design) - 1440px
+  - Working on Desktop design on `design `folder - 1440px
   - Improving Components and app data flow by useContext
   - Adding Drag & Drop to reorder items and animation to components with framer-motion
 
 ### Built with
+  - React
+  - Framer-motion
+  - Css Module
+  - Flex, Grid, Custom variable
+  - Semantic HTML5 markup
+  - Mobile first workflow
 
 
 ### What I learned
 
+In this project I learned how work on: 
+  - Dark & light mode
+  - Manage state usign useReducer
+  - Flowing data using useContext
+  - Drag & drop using framer-motion
+
 ### Continued development
+
+I think I must work on more logical project like this one to get more comfortable 
+with handling larger project
 
 ### Useful resources
 
+- [CSS Tailwind Preflight](https://tailwindcss.com/docs/preflight) - A great CSS reset
+
+- [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
+
 ## Author
 
+- github - [@siavhnz](https://www.your-site.com)
+
+- Frontend Mentor - [@siavhnz](https://www.frontendmentor.io/profile/siavhnz)
+
 ## Acknowledgments
+
+Thanks To
+
+[Frontendmentor.io](https://www.frontendmentor.io/challenges) - for their Excitement challenges  
+
+[Perfect Pixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=en) - for such a great extension
+
+
 
