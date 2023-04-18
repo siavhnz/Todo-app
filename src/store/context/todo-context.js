@@ -15,6 +15,7 @@ export const TodoContext = createContext({
     clearCompleted: () => {},
     markAsCompleted: (id) => {},
     filter: (mode) => {},
+    reorderList: () => {},
 });
 
 
@@ -28,12 +29,13 @@ const TodoContextProvider = (props) => {
      * activeItemsCount for the first load 
      */
     const [state, dispatch] = useReducer(todoReducer, todoDefaultState, () => {
+        
         return {
             list: data,
+            filteredList: filterList(data, modes.All),
             uid: 6,
             mode: modes.All,
             activeItemsCount: calculateItemsCount(data, modes.Active),
-            filteredList: filterList(data, modes.All),
         }
     });
 
@@ -77,6 +79,14 @@ const TodoContextProvider = (props) => {
         })
     }
 
+    // Call dispatch for reorder the todos with framer-motion
+    const reorderList = (items) => {
+        dispatch({
+            type: "REORDER_LIST",
+            payload: items
+        });
+    }
+
     const value = {
             list: state.list,
             filteredList: state.filteredList,
@@ -88,6 +98,7 @@ const TodoContextProvider = (props) => {
             clearCompleted: clearCompleted,
             markAsCompleted: markAsCompleted,
             filter: filter,
+            reorderList: reorderList
         };
     
     return <TodoContext.Provider value={value}>

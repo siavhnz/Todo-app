@@ -80,6 +80,10 @@
     color: var(--color-very-dark-grayish-blue);
 }
 
+.actions-container button:hover {
+    transition: color 1s;
+}
+
 /*
     dark mode styles
 */
@@ -125,8 +129,7 @@ body[data-theme="theme-dark"] .empty{
         justify-content: space-between;
         background-color: var(--color-very-light-gray);
         font-size: 0.85rem;
-        border-bottom-right-radius: 0.25rem;
-        border-bottom-left-radius: 0.25rem;
+        border-radius: 0.25rem;
     } 
 
     .modes-container {

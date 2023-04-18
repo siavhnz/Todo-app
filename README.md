@@ -50,6 +50,7 @@ Users should be able to:
   - Working on Light and Dark mode
   - Working on Desktop design on ![design folder](./design) - 1440px
   - Improving Components and app data flow by useContext
+  - Adding Drag & Drop to reorder items and animation to components with framer-motion
 
 ### Built with
 

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { TodoContext } from "../../store/context/todo-context";
 import Item from "./Item";
 import Actions from "./Actions";
+import { Reorder } from "framer-motion";
 
 /**
  * List of todos component
@@ -11,22 +12,21 @@ const List = () => {
 
     const todoCtx = useContext(TodoContext);
 
-    // Get Todos from context
-    let items = todoCtx.filteredList;
-
     // Create Todo list
-    const list = <ul>
+    const list = <Reorder.Group as="ul" axis="y" values={todoCtx.filteredList} onReorder={todoCtx.reorderList} >
         {
-            items.map((item, index) => {
+            todoCtx.filteredList.map((item) => {
                 return (
-                    <Item key={index}
+                    <Item 
+                    key={item.id}
                     id={item.id}
                     title={item.title}
-                    mode={item.mode}/>
+                    mode={item.mode}
+                    value={item}/>
                 ); 
             })
         }
-    </ul>;
+    </Reorder.Group>;
         
 
     return(
